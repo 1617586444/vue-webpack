@@ -5,7 +5,8 @@ import Vue from 'vue';
 new Vue({
   el:'#app',
   data:{
-     msg:'我是vue 里面的data'
+     msg:'我是vue 里面的data数据',
+     hello:'二狗'
   },
 
   // 我将采用 render 函数的方式去渲染函数页面元素

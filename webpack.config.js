@@ -22,7 +22,7 @@ module.exports = {
     // 自动生成一个 HTML文件在出口位置 ，并且会自动在这个生成的文件中引入 打包的生成的 js 文件
     new HtmlWebpackPlugin({
       title:'三只老鼠',    // 如果存在 template title就不生效
-      filename:'demo.html',
+      filename:'index.html',
       template:'./index.html'  // 将index.html 作为生成的demo.html的模板
     }),
 
@@ -44,5 +44,13 @@ module.exports = {
     alias:{
       vue :'vue/dist/vue.esm.js'
     }
-  }
+  },
+
+
+  //  webpack-dev-server 的配置
+devServer:{
+  // 配置那个文件夹作为web服务的根路径
+  contentBase: path.resolve(__dirname, './dist')
+}
+
 }
